@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import NotImplemented from "@/components/NotImplemented";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,29 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-zinc-100">
+        <nav className="bg-white shadow-sm">
+          <div className="flex-1">
+            <img className="w-8/100" src="https://i0.wp.com/mmglobalsolutionsconsulting.com/wp-content/uploads/2022/05/MM_logo.png?fit=161%2C68&ssl=1" />
+          </div>
+        </nav>
+        <div className="grid grid-cols-[18rem_1fr]">
+          <div className="side-bar mt-4 ms-12">
+            <div>
+              <Link href="/transactions">
+                Transactions
+              </Link>
+            </div>
+            <NotImplemented value="Settings" />
+            <NotImplemented value="User management" />
+            <NotImplemented value="ATM management" />
+            <NotImplemented value="My account" />
+          </div>
+          <div>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
