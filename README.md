@@ -6,5 +6,3 @@ This project was completed using Next.js under Node.js. It should be that `npm` 
 1. Run `npm install` under the project root directory to download the dependencies and libraries necessary to run the code.
 2. Then, in the same directory, run `npm run dev` to initiate the frontend server.
 3. You should now be able to access the Transactions page at http://localhost:3000/transactions.
-## Thank You!
-I'd like to express my gratitude for having the chance at this opportunity. I've learned a lot working on this challenge so regardless of the outcome, I can say for certain that this has been a valuable experience!
